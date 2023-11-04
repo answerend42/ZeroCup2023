@@ -31,6 +31,16 @@ export default {
                 </div>
               </div>
               <div class="svg-wrapper">
+                <div class="guidance">向下滑动了解更多</div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
                 <svg width="105" height="26" viewBox="0 0 105 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M52.093 24.64L1 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
                   <path d="M52.093 24.64L103.186 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
@@ -39,8 +49,10 @@ export default {
             </div>`,
           backgroundImage: image1,
         },
-        { content: "第二页内容", backgroundImage: image2 },
-        { content: "第三页内容", backgroundImage: "" },
+        { content: "第二页内容", backgroundImage: image1 },
+        { content: "第三页内容", backgroundImage: image1 },
+        { content: "第四页内容", backgroundImage: image1 },
+
       ],
     };
   },
@@ -149,7 +161,14 @@ export default {
   text-align: center;
 }
 
-.text {
-  font-size: 24px;
+.guidance {
+  font-family: "思源宋体";
+  font-size: 1.5vw;
+}
+@media (max-width: 768px) {
+  .guidance {
+    font-family: "思源宋体";
+    font-size: 3vw;
+  }
 }
 </style>

@@ -3,7 +3,6 @@
     <div class="container">
       <ul>
         <li><router-link to="/">主页</router-link></li>
-        <li><router-link to="/clubs">社团</router-link></li>
         <li><router-link to="/organizations">学生组织</router-link></li>
         <li><router-link to="/traditional-buildings">传统建筑</router-link></li>
         <li><router-link to="/traditional-culture">传统文化</router-link></li>
@@ -56,25 +55,33 @@ export default {
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px 20px;
 }
 
 ul {
   list-style: none;
   padding: 0;
-  display: flex;
-  gap: 20px;
+  text-align: center; /* 让整个列表水平居中 */
 }
 
 li {
-  font-size: 18px;
+  font-size: 1.5vw;
   font-family: "思源宋体";
   color: white;
+  display: inline; /* 使li项在同一行水平排列 */
+  margin: 1.5vw;
 }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+@media (max-width: 768px) {
+  li {
+    font-size: 3vw; /* 在小屏幕上增加字体大小 */
+    margin: 3vw;
+  }
 }
 </style>
