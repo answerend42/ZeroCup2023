@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     handleScroll() {
-      this.isNavbarVisible = window.scrollY > window.innerHeight;
+      this.isNavbarVisible = window.scrollY > window.innerHeight / 3 * 2;
     },
   },
 };
@@ -44,6 +44,7 @@ export default {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  z-index: 2; /* Add a higher z-index value to make sure the navbar is on top of other content */
 }
 
 .navbar-visible {
