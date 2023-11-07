@@ -30,7 +30,7 @@ import image2 from "@/assets/03.jpg";
 import image3 from "@/assets/04.jpg";
 import backgroundImage from "@/assets/主页底图.png";
 export default {
-  name: "Section4",
+  name: "Section3",
   data() {
     return {
       cards: [

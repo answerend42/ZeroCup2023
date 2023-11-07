@@ -3,7 +3,7 @@
     <div class="container">
       <ul>
         <li><router-link to="/">主页</router-link></li>
-        <li><router-link to="/organizations">学生组织</router-link></li>
+        <li>学生组织</li>
         <li><router-link to="/traditional-buildings">传统建筑</router-link></li>
         <li><router-link to="/traditional-culture">传统文化</router-link></li>
       </ul>
@@ -19,14 +19,17 @@ export default {
     };
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   },
   destroyed() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
     handleScroll() {
-      this.isNavbarVisible = window.scrollY > window.innerHeight / 3 * 2;
+      this.isNavbarVisible = window.scrollY > (window.innerHeight / 3) * 2;
+    },
+    goToSection(sectionNumber) {
+      this.$emit("navigate-to-section", sectionNumber);
     },
   },
 };
@@ -47,12 +50,11 @@ export default {
 }
 
 .navbar-visible {
-  background-color: rgba(0, 0, 0, 0.5); /* 黑色背景，50% 透明度 */
+  background-color: rgba(0, 0, 0, 0.1); /* 黑色背景，50% 透明度 */
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
-
 
 .container {
   display: flex;

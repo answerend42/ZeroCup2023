@@ -6,10 +6,10 @@
     ></div>
     <div class="content-wrapper">
       <div class="image3-container">
-        <img src="../assets/珈粹.png" class="background-center" />
+        <img src="@/assets/珈粹.png" class="background-center" />
         <div class="background-bottom" style="width: 100%; overflow: hidden">
           <img
-            src="../assets/words.png"
+            src="@/assets/words.png"
             class="background-bottom"
             style="width: 100%; max-width: 100%; height: auto"
           />
@@ -43,9 +43,8 @@
 </template>
 
 <script>
-import image1 from "../assets/主页底图.png";
-import image3 from "../assets/珈粹.png";
-import image4 from "../assets/words.png";
+import image1 from "@/assets/主页底图.png";
+
 
 export default {
   name: "Section1",

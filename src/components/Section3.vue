@@ -25,12 +25,12 @@
 </template>
 
 <script>
-import backgroundImage from "../assets/index_page_3.png";
-import contentBackgroundImage from "../assets/文本框框架.png"; // 确认这是content区域背景图的正确路径
-import buttonImage1 from "../assets/笛箫协会.png";
-import buttonImage2 from "../assets/传统武术协会.png";
-import buttonImage3 from "../assets/珞珈民乐团.png";
-import buttonImage4 from "../assets/相声协会.png";
+import backgroundImage from "@/assets/index_page_3.png";
+import contentBackgroundImage from "@/assets/文本框框架.png"; // 确认这是content区域背景图的正确路径
+import buttonImage1 from "@/assets/笛箫协会.png";
+import buttonImage2 from "@/assets/传统武术协会.png";
+import buttonImage3 from "@/assets/珞珈民乐团.png";
+import buttonImage4 from "@/assets/相声协会.png";
 export default {
   name: "Section3",
   data() {

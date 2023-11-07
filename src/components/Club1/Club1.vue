@@ -1,10 +1,10 @@
 <template>
-  <div id="app">
+  <div>
     <Navbar :is-visible="currentSection !== 0" />
     <div @wheel.prevent="handleScroll" class="section-container">
       <Section1 />
       <Section2 />
-      <Section3 id="section3"/>
+      <Section3 />
       <Section4 />
     </div>
   </div>
@@ -12,10 +12,10 @@
 
 <script>
 import Navbar from "@/components/Navbar.vue";
-import Section1 from "@/components/Section1.vue";
-import Section2 from "@/components/Section2.vue";
-import Section3 from "@/components/Section3.vue";
-import Section4 from "@/components/Section4.vue";
+import Section1 from "@/components/Club1/Section1.vue";
+import Section2 from "@/components/Club1/Section2.vue";
+import Section3 from "@/components/Club1/Section3.vue";
+import Section4 from "@/components/Club1/Section4.vue";
 
 export default {
   name: "App",
@@ -76,6 +76,7 @@ export default {
 </script>
 
 <style>
+/* Styles to maintain full view height for sections and other styles */
 .section-container .section {
   height: 100vh;
 }

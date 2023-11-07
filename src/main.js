@@ -5,13 +5,14 @@ import MainPage from "./components/MainPage.vue"; // Import the MainPage compone
 import OrganizationsPage from "./components/OrganizationsPage.vue"
 import TraditionalBuildingsPage from "./components/TraditionalBuildingsPage.vue"
 import TraditionalCulturePage from "./components/TraditionalCulturePage.vue"
+import Club1 from "./components/Club1/Club1.vue"
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: "/", component: MainPage },
-    { path: "/organizations", component: OrganizationsPage },
     { path: "/traditional-buildings", component: TraditionalBuildingsPage },
     { path: "/traditional-culture", component: TraditionalCulturePage },
+    { path: "/organizations/club1", component: Club1},
   ],
 });
 

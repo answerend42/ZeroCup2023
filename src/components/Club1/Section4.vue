@@ -1,26 +1,9 @@
 <template>
   <div class="section" :style="sectionStyle">
-    <div class="card-container">
-      <div
-        v-for="(card, index) in cards"
-        :key="index"
-        class="card"
-        @mouseenter="expandCard(index)"
-        @mouseleave="resetCard(index)"
-        @click="toggleFullScreenImage(index)"
-        :class="{ expanded: card.expanded, fullscreen: card.fullscreen }"
-      >
-        <!-- 全屏时显示详细介绍的文本框 -->
-        <div v-if="card.fullscreen" class="card-text-overlay">
-          <p>{{ card.contentFull }}</p>
-        </div>
-        <!-- 非全屏时显示简略介绍的文本内容 -->
-        <div class="card-content" v-show="!card.fullscreen">
-          <p>{{ card.contentBrief }}</p>
-        </div>
-        <img :src="card.image" alt="Card Image" />
-      </div>
-    </div>
+    <audio controls>
+      <source src="@/assets/1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
   </div>
 </template>
 
