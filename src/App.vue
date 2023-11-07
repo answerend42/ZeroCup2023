@@ -22,4 +22,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 </style>

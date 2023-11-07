@@ -47,11 +47,12 @@ export default {
 }
 
 .navbar-visible {
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.5); /* 黑色背景，50% 透明度 */
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
+
 
 .container {
   display: flex;
