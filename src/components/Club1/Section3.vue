@@ -28,7 +28,7 @@
 import image1 from "@/assets/02.jpg";
 import image2 from "@/assets/03.jpg";
 import image3 from "@/assets/04.jpg";
-import backgroundImage from "@/assets/主页底图.png";
+import backgroundImage from "@/assets/笛箫协会背景.png";
 export default {
   name: "Section3",
   data() {

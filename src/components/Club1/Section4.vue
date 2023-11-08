@@ -1,63 +1,36 @@
 <template>
   <div class="section" :style="sectionStyle">
     <audio controls>
-      <source src="@/assets/1.mp3" type="audio/mpeg">
+      <source src="@/assets/1.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
+
+    <SocialMediaBar
+      bilibiliLink="https://space.bilibili.com/220761508"
+      qqLink="你的QQ链接"
+      :wechatQRCode="wechatQRCodeImage"
+    />
   </div>
 </template>
 
 <script>
-import image1 from "@/assets/02.jpg";
-import image2 from "@/assets/03.jpg";
-import image3 from "@/assets/04.jpg";
-import backgroundImage from "@/assets/主页底图.png";
+import backgroundImage from "@/assets/笛箫协会背景.png";
+import SocialMediaBar from "@/components/SocialMediaBar.vue"; // 确保路径正确
+import wechatQRCodeImage from '@/assets/笛箫协会公众号.png';
+
 export default {
   name: "Section4",
+  components: {
+    SocialMediaBar,
+  },
   data() {
     return {
-      cards: [
-        {
-          image: image1,
-          contentBrief: "Brief 1",
-          contentFull: "Full description for Card 1",
-          expanded: false,
-          fullscreen: false,
-        },
-        {
-          image: image2,
-          contentBrief: "Brief 2",
-          contentFull: "Full description for Card 2",
-          expanded: false,
-          fullscreen: false,
-        },
-        {
-          image: image3,
-          contentBrief: "Brief 3",
-          contentFull: "Full description for Card 3",
-          expanded: false,
-          fullscreen: false,
-        },
-      ],
+      wechatQRCodeImage
+      // 数据部分
     };
   },
   methods: {
-    expandCard(index) {
-      this.cards[index].expanded = true;
-    },
-    resetCard(index) {
-      this.cards[index].expanded = false;
-    },
-    toggleFullScreenImage(index) {
-      this.cards[index].fullscreen = !this.cards[index].fullscreen;
-      if (this.cards[index].fullscreen) {
-        this.cards.forEach((card, i) => {
-          if (i !== index) {
-            card.fullscreen = false;
-          }
-        });
-      }
-    },
+    // 方法部分
   },
   computed: {
     sectionStyle() {
@@ -75,81 +48,17 @@ export default {
 <style scoped>
 .section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
+  position: relative; /* 为社交媒体栏定位 */
 }
 
-.card {
-  width: 200px;
-  height: 500px; /*固定高度*/
-  transition: width 0.4s; /* 过渡宽度属性 */
-  margin: 10px;
-  cursor: pointer;
-  background-color: #fff; /* 设置卡片的背景颜色 */
-  overflow: hidden; /* 隐藏内容溢出 */
-  position: relative; /* 相对定位 */
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 保证图片覆盖整个卡片 */
-  transition: transform 0.4s; /* 过渡图片变换 */
-}
-
-.card.expanded {
-  width: 600px; /* 高度不变，宽度变宽 */
-}
-
-.card-text-overlay {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  z-index: 4;
-}
-
-.card.fullscreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw; /* 视口宽度 */
-  height: 100vh; /* 视口高度 */
-  margin: 0; /* 移除外边距 */
-  padding: 0; /* 移除内边距 */
-  z-index: 3;
-  cursor: zoom-out;
-}
-
-.card.fullscreen img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 保证图片覆盖整个容器 */
-}
-
-.card.fullscreen .card-text-overlay {
-  display: block;
-}
-
-.card-content {
+.social-media-bar {
   position: absolute;
   bottom: 0;
-  left: 0;
   width: 100%;
-  padding: 10px;
-  background-color: #fff;
-  text-align: center;
-  transition: opacity 0.4s;
-  z-index: 2;
+  /* 其他样式和SocialMediaBar.vue中的保持一致 */
 }
 </style>

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import backgroundImage from "@/assets/主页底图.png";
+import backgroundImage from "@/assets/笛箫协会背景.png";
 import contentBackgroundImage from "@/assets/文本框框架.png"; // 确认这是content区域背景图的正确路径
 import image1 from "@/assets/01.jpg";
 export default {

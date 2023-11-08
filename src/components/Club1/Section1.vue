@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import image1 from "@/assets/主页底图.png";
+import image1 from "@/assets/笛箫协会背景.png";
 
 export default {
   name: "Section1",
