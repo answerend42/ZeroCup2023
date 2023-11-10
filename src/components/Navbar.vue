@@ -2,10 +2,10 @@
   <nav class="navbar" :class="{ 'navbar-visible': isNavbarVisible }">
     <div class="container">
       <ul>
-        <li><router-link to="/">主页</router-link></li>
-        <li>学生组织</li>
-        <li><router-link to="/traditional-buildings">传统建筑</router-link></li>
-        <li><router-link to="/traditional-culture">传统文化</router-link></li>
+        <li><a @click="goToSection(0)">主页</a></li>
+        <li><a @click="goToSection(2)">学生组织</a></li>
+        <li><a @click="goToSection(3)">传统建筑</a></li>
+        <li><a @click="goToSection(4)">传统文化</a></li>
       </ul>
     </div>
   </nav>
@@ -29,7 +29,11 @@ export default {
       this.isNavbarVisible = window.scrollY > (window.innerHeight / 3) * 2;
     },
     goToSection(sectionNumber) {
-      this.$emit("navigate-to-section", sectionNumber);
+      this.$emit('navigate-to-section', sectionNumber);
+      console.log("Navigating to section:", sectionNumber);
+      const sectionId = `section${sectionNumber + 1}`;
+      // 使用window.location.href进行跳转并附带锚点，以滚动到特定的Section
+      window.location.href = `/#${sectionId}`;
     },
   },
 };

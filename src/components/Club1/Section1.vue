@@ -65,9 +65,13 @@ export default {
 }
 .tagline {
   position: absolute;
-  top: 70%; /* 根据logo实际缩放后的大小调整此值 */
+  bottom: 10%; /* 根据logo实际缩放后的大小调整此值 */
   left: 50%;
   transform: translate(-50%, 20px); /* 水平居中并稍微垂直偏移 */
   width: 100%;
+  font-family: "思源宋体";
+  font-weight: 900;
+  font-size: 4em;
+  color: #1661ab;
 }
 </style>

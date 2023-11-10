@@ -2,7 +2,6 @@ import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import App from "./App.vue";
 import MainPage from "./components/MainPage.vue"; // Import the MainPage component
-import OrganizationsPage from "./components/OrganizationsPage.vue"
 import TraditionalBuildingsPage from "./components/TraditionalBuildingsPage.vue"
 import TraditionalCulturePage from "./components/TraditionalCulturePage.vue"
 import Club1 from "./components/Club1/Club1.vue"

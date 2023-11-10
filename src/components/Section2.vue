@@ -1,16 +1,6 @@
 <template>
   <div class="section" :style="sectionStyle">
-    <!-- <div class="content" :style="contentStyle">
-      <p>
-        中华文化，源远流长，博大精深，如同一座博物馆，珍藏着无数的文明密码。
-      </p>
-      <p>
-        武汉大学，这座拥有着130年悠久历史的学府，它犹如一座沉淀着时光的庙堂，承载着无数学子的梦想与探索。这里并非仅仅是一所学府，而是一座文化的宝库，承载着古老智慧的珍宝。
-      </p>
-      <p>
-        这片土地上，每一颗沉淀的文化之珠都散发着独特的光芒。让我们深入其中，感受传统文化的魅力，如同在博物馆里品味历史的岁月沉香，与中华文明的悠久历史对话，领悟古今交融的智慧之美。
-      </p>
-    </div> -->
+
   </div>
 </template>
 
@@ -42,7 +32,7 @@ export default {
     sectionStyle() {
       return {
         backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "contain",
+        backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       };

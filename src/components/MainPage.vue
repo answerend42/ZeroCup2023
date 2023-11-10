@@ -1,11 +1,14 @@
 <template>
   <div id="app">
-    <Navbar :is-visible="currentSection !== 0" />
+    <Navbar
+  :is-visible="currentSection !== 0"
+  @navigate-to-section="scrollToSection"
+/>
     <div @wheel.prevent="handleScroll" class="section-container">
-      <Section1 />
-      <Section2 />
-      <Section3 id="section3"/>
-      <Section4 />
+      <Section1 ref="section1" />
+      <Section2 ref="section2" />
+      <Section3 ref="section3" />
+      <Section4 ref="section4" />
     </div>
   </div>
 </template>
@@ -64,11 +67,42 @@ export default {
         ).map((el) => el.offsetTop);
       });
     },
-  },
-  mounted() {
+    scrollToSection(sectionIndex) {
+      this.isScrolling = true;
+      this.currentSection = sectionIndex;
+
+      window.scrollTo({
+        top: this.sectionsOffsetTop[sectionIndex],
+        behavior: "smooth",
+      });
+
+      setTimeout(() => {
+        this.isScrolling = false;
+      }, 1000);
+    },
+    scrollToAnchor() {
     this.calculateSectionsOffsetTop();
-    window.addEventListener("resize", this.calculateSectionsOffsetTop);
+    this.$nextTick(() => {
+      if (window.location.hash) {
+        const sectionId = window.location.hash.substring(1); // 去除锚点前的#
+        const sectionNumber = Number(sectionId.replace("section", "")) - 1;
+
+        if (!isNaN(sectionNumber) && sectionNumber >= 0 && sectionNumber < this.sectionsOffsetTop.length) {
+          window.scrollTo({
+            top: this.sectionsOffsetTop[sectionNumber],
+            behavior: "smooth",
+          });
+        }
+      }
+    });
   },
+},
+mounted() {
+  window.addEventListener("hashchange", this.scrollToAnchor);
+  this.scrollToAnchor(); // 确保在页面加载时调用
+  this.calculateSectionsOffsetTop();
+  window.addEventListener("resize", this.calculateSectionsOffsetTop);
+},
   beforeDestroy() {
     window.removeEventListener("resize", this.calculateSectionsOffsetTop);
   },

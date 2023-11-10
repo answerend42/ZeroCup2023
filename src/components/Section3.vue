@@ -11,15 +11,25 @@
         在这里，传统文化不再是枯燥的历史课本，而是一幅幅生动的画卷，一段段婉转的音符，将学子们带入了中华文化的瑰丽世界。传统文化社团，如同一朵盛开的文化之花，绽放着丰富多彩的光芒。
       </p>
     </div>
+      <img
+        src="@/assets/传统文化社团.png"
+        alt="Top Left Image"
+        class="top-left-image"
+      />
     <div class="buttons" :style="buttonsStyle">
+      <a
+      v-for="button in buttons"
+      :key="button.name"
+      :href="button.link"
+      class="button-link"
+    >
       <button
         class="button"
-        v-for="button in buttons"
-        :key="button.name"
         :style="{ backgroundImage: 'url(' + button.background + ')' }"
       >
         {{ button.name }}
       </button>
+    </a>
     </div>
   </div>
 </template>
@@ -31,6 +41,7 @@ import buttonImage1 from "@/assets/笛箫协会.png";
 import buttonImage2 from "@/assets/传统武术协会.png";
 import buttonImage3 from "@/assets/珞珈民乐团.png";
 import buttonImage4 from "@/assets/相声协会.png";
+import image1 from "@/assets/传统文化社团.png"
 export default {
   name: "Section3",
   data() {
@@ -59,11 +70,11 @@ export default {
         height: "400px", // 根据按钮的大小和间距需要调整
       },
       buttons: [
-        { name: "笛箫协会", background: buttonImage1 },
-        { name: "传统武术协会", background: buttonImage2 },
-        { name: "民乐团", background: buttonImage3 },
-        { name: "传统武术", background: buttonImage4 },
-      ], // 其他数据
+        { name: '笛箫协会', background: buttonImage1, link: '/organizations/club1' },
+        { name: '传统武术协会', background: buttonImage2, link: '/button2' },
+        { name: '民乐团', background: buttonImage3, link: '/button3' },
+        { name: '传统武术', background: buttonImage4, link: '/button4' },
+      ],
     };
   },
   computed: {
@@ -97,6 +108,8 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  font-family: "思源宋体";
+  font-size: 1.5em;
 }
 
 .button:hover {
@@ -144,5 +157,13 @@ export default {
   justify-content: flex-end; /* 修改为 flex-end 使子元素对齐到容器的右侧 */
   align-items: center;
   /* 更多样式 */
+}
+.top-left-image {
+  width: 100px; /* 调整宽度，可以根据需要修改 */
+  position: absolute;
+  top: 150px;
+  left: 200px;
+  z-index: 2; /* 确保图片位于内容和伪元素之间 */
+  transform: scale(4);
 }
 </style>
