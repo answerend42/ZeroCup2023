@@ -39,6 +39,7 @@ import image3 from "../assets/宋卿体育馆.jpg";
 import image4 from "../assets/周恩来故居.jpg";
 
 import backgroundImage from "@/assets/主页底图.png";
+
 export default {
   name: "Section4",
   data() {
@@ -111,6 +112,7 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap');
 .description-container {
   margin-top: auto;
   margin-left: auto;
@@ -122,7 +124,7 @@ export default {
 }
 
 .overall-description {
-  font-family: "思源宋体";
+  font-family: 'Noto Serif SC', serif;
   font-size: 1.5em;
   font-weight: 700;
 
@@ -206,7 +208,7 @@ export default {
   padding: auto;
   background-color: rgba(255, 255, 255, 0.6);
   text-align: center;
-  font-family: "思源宋体";
+  font-family: 'Noto Serif SC', serif;
   transition: opacity 0.4s;
   z-index: 2;
 }

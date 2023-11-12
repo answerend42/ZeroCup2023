@@ -1,13 +1,14 @@
 <template>
   <div class="section" :style="sectionStyle">
+    <h1 class="section-title">《二十四桥明月夜》</h1>
     <audio controls>
-      <source src="@/assets/1.mp3" type="audio/mpeg" />
+      <source src="@/assets/二十四桥明月夜.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
 
     <SocialMediaBar
       bilibiliLink="https://space.bilibili.com/220761508"
-      qqLink="你的QQ链接"
+      qqLink="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=DWb0JMS__Rd60W7TBx7kwdtFrwup3-Fi&authKey=60nVjqyNVkUKFLd4zzBAWP9gN%2B88AqwE5sVKNjL7apI5xwnnR4FYi7PnZfXnucbq&noverify=0&group_code=474732833"
       :wechatQRCode="wechatQRCodeImage"
     />
   </div>
@@ -16,7 +17,7 @@
 <script>
 import backgroundImage from "@/assets/笛箫协会背景.png";
 import SocialMediaBar from "@/components/SocialMediaBar.vue"; // 确保路径正确
-import wechatQRCodeImage from '@/assets/笛箫协会公众号.png';
+import wechatQRCodeImage from "@/assets/笛箫微信二维码.png";
 
 export default {
   name: "Section4",
@@ -25,7 +26,7 @@ export default {
   },
   data() {
     return {
-      wechatQRCodeImage
+      wechatQRCodeImage,
       // 数据部分
     };
   },
@@ -54,7 +55,9 @@ export default {
   height: 100vh;
   position: relative; /* 为社交媒体栏定位 */
 }
-
+.section-title {
+  font-family: "Noto Serif SC", serif;
+}
 .social-media-bar {
   position: absolute;
   bottom: 0;

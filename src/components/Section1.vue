@@ -114,8 +114,9 @@ export default {
 }
 
 .guidance {
-  font-family: "思源宋体";
+  font-family: 'Noto Serif SC', serif;
   font-size: 1.5vw;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {

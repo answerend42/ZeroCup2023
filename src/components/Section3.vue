@@ -41,6 +41,7 @@ import buttonImage1 from "@/assets/笛箫协会.png";
 import buttonImage2 from "@/assets/传统武术协会.png";
 import buttonImage3 from "@/assets/珞珈民乐团.png";
 import buttonImage4 from "@/assets/相声协会.png";
+import buttonImage5 from "@/assets/珞源国学社.jpg";
 import image1 from "@/assets/传统文化社团.png"
 export default {
   name: "Section3",
@@ -62,7 +63,7 @@ export default {
       },
       buttonsStyle: {
         position: "absolute",
-        bottom: "20px",
+        bottom: "40px",
         left: "20px",
         display: "flex",
         flexDirection: "column",
@@ -71,9 +72,10 @@ export default {
       },
       buttons: [
         { name: '笛箫协会', background: buttonImage1, link: '/organizations/club1' },
-        { name: '传统武术协会', background: buttonImage2, link: '/button2' },
-        { name: '民乐团', background: buttonImage3, link: '/button3' },
-        { name: '传统武术', background: buttonImage4, link: '/button4' },
+        { name: '相声协会', background: buttonImage4, link: '/organizations/club2' },
+        { name: '传统武术协会', background: buttonImage2, link: '/organizations/club3' },
+        { name: '民乐团', background: buttonImage3, link: '/organizations/club4' },
+        { name: '珞源国学社', background: buttonImage5, link: '/organizations/club5' },
       ],
     };
   },
@@ -108,7 +110,8 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: "思源宋体";
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
   font-size: 1.5em;
 }
 
@@ -152,7 +155,7 @@ export default {
   max-width: 600px;
   text-align: left;
   font-size: 1.5em;
-  font-family: "思源宋体";
+  font-family: 'Noto Serif SC', serif;
   font-weight: bold;
   justify-content: flex-end; /* 修改为 flex-end 使子元素对齐到容器的右侧 */
   align-items: center;

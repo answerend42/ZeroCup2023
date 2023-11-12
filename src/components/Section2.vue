@@ -51,21 +51,6 @@ export default {
   width: 100vw;
 }
 
-.section::before {
-  content: ""; /* 伪元素需要content属性 */
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url("../assets/牌坊.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.9; /* 设置透明度 */
-  z-index: -1; /* 确保伪元素位于内容之下 */
-}
-
 .content {
   z-index: 1; /* 确保内容位于伪元素之上 */
   /* 其他样式 */
@@ -77,7 +62,7 @@ export default {
   max-width: 600px;
   text-align: left;
   font-size: 1.5em;
-  font-family: "思源宋体";
+  font-family: 'Noto Serif SC', serif;
   font-weight: bold;
   /* 更多样式 */
 }

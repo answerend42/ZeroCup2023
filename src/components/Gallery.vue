@@ -13,6 +13,7 @@
               alt="Gallery Image"
               @mouseover="pauseSlideshow"
               @mouseout="startSlideshow"
+              class="image"
             />
           </div>
         </div>
@@ -24,7 +25,7 @@
           v-for="(image, index) in images"
           :key="index"
           class="pagination-dot"
-          @mouseover="goToImage(index)"
+          @click="goToImage(index)"
           :class="{ active: index === currentImage }"
         ></div>
       </div>
@@ -36,29 +37,35 @@
 </template>
 
 <script>
+import image1 from "@/assets/晨读1.jpg";
+import image2 from "@/assets/晨读2.jpg";
+import image3 from "@/assets/晨读3.jpg";
+import image4 from "@/assets/晨读4.jpg";
+import image5 from "@/assets/晨读5.jpg";
+
 export default {
   data() {
     return {
       images: [
         {
-          src: "./src/assets/01.jpg",
-          description: "图片介绍1",
+          src: image1,
+          description: "竹枝词九首(节选)",
         },
         {
-          src: "./src/assets/02.jpg",
-          description: "图片介绍2",
+          src: image2,
+          description: "木兰花慢",
         },
         {
-          src: "./src/assets/03.jpg",
-          description: "图片介绍3",
+          src: image3,
+          description: "九歌·湘夫人",
         },
         {
-          src: "./src/assets/04.jpg",
-          description: "图片介绍4",
+          src: image4,
+          description: "搜神后记·白水素女",
         },
         {
-          src: "./src/assets/05.jpg",
-          description: "图片介绍5",
+          src: image5,
+          description: "续齐谐记·阳羡书生",
         },
         // 添加更多图片
       ],
@@ -81,6 +88,7 @@ export default {
       this.currentImage =
         (this.currentImage - 1 + this.images.length) % this.images.length;
     },
+
     goToImage(index) {
       this.currentImage = index;
     },
@@ -118,13 +126,16 @@ export default {
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
+  max-height: 600px;
+  margin: 0 auto;
 }
 
 .image-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -138,11 +149,18 @@ export default {
   max-width: 100%;
 }
 
+.image {
+  width: 100%;
+  height: 100%;
+  transform: scale(0.6);
+  object-fit: contain;
+}
+
 .pagination {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80%; /* Image container takes 80% of the page width */
+  width: 80%;
   margin-bottom: 10px;
 }
 
@@ -166,10 +184,10 @@ export default {
   background-color: #000;
 }
 
-
 .image-description {
   text-align: right;
   font-weight: bold;
+  font-family: 'Noto Serif SC', serif;
   color: #000;
 }
 </style>

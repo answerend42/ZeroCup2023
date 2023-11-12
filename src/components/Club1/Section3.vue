@@ -25,9 +25,9 @@
 </template>
 
 <script>
-import image1 from "@/assets/02.jpg";
-import image2 from "@/assets/03.jpg";
-import image3 from "@/assets/04.jpg";
+import image1 from "@/assets/笛箫配图1.jpg";
+import image2 from "@/assets/笛箫配图3.jpg";
+import image3 from "@/assets/笛箫配图4.jpg";
 import backgroundImage from "@/assets/笛箫协会背景.png";
 export default {
   name: "Section3",
@@ -36,22 +36,25 @@ export default {
       cards: [
         {
           image: image1,
-          contentBrief: "Brief 1",
-          contentFull: "Full description for Card 1",
+          contentBrief: "武汉笛箫迎新音乐会",
+          contentFull:
+            "佳期如梦，笛箫传情；良辰美景，初遇知音。横吹为笛，竖吹作箫，笛声清亮，箫音典雅，不管是“笛声依约芦花里，白鸟成行忽惊起”，还是“二十四桥明月夜，玉人何处教吹箫”，无不是处处彰显着她们的风韵，初到武大的你，在珞珈山下，也将觅到这样的地方。",
           expanded: false,
           fullscreen: false,
         },
         {
           image: image2,
-          contentBrief: "Brief 2",
-          contentFull: "Full description for Card 2",
+          contentBrief: "武汉大学元旦晚会",
+          contentFull:
+            "悠扬的笛箫，和着有节奏的鼓点，加上郭元超学长英姿煞爽的舞刀，瞬间带领着我们踏进了金庸老先生笔下豪情万丈的武林世界。",
           expanded: false,
           fullscreen: false,
         },
         {
           image: image3,
-          contentBrief: "Brief 3",
-          contentFull: "Full description for Card 3",
+          contentBrief: "“一梦笛箫”",
+          contentFull:
+            "《瑶族舞曲》脱胎于瑶族传统歌舞鼓乐《长鼓舞曲》，一梦的舞台上选用竹笛合奏的形式更是将瑶族人民欢歌乐舞的场面表现得淋漓尽致，突出了竹笛的音色和性能，小可爱们听完这一曲是不是都跃跃欲试，想要回去接着练习笛子了呢~",
           expanded: false,
           fullscreen: false,
         },
@@ -163,8 +166,10 @@ export default {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 10px;
-  background-color: #fff;
+  padding: auto;
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.6);
   text-align: center;
   transition: opacity 0.4s;
   z-index: 2;
