@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import backgroundImage from "@/assets/民乐团底图.png";
+import backgroundImage from "@/assets/民乐团底图.webp";
 import SocialMediaBar from "@/components/SocialMediaBar.vue"; // 确保路径正确
-import wechatQRCodeImage from "@/assets/民乐团微信二维码.png";
+import wechatQRCodeImage from "@/assets/民乐团微信二维码.webp";
 
 export default {
   name: "Section4",

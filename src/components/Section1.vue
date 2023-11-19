@@ -6,10 +6,10 @@
     ></div>
     <div class="content-wrapper">
       <div class="image3-container">
-        <img src="@/assets/珈粹.png" class="background-center" />
+        <img src="@/assets/珈粹.webp" class="background-center" />
         <div class="background-bottom" style="width: 100%; overflow: hidden">
           <img
-            src="@/assets/words.png"
+            src="@/assets/words.webp"
             class="background-bottom"
             style="width: 100%; max-width: 100%; height: auto"
           />
@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import image1 from "@/assets/主页底图.png";
+import image1 from "@/assets/主页底图.webp";
 
 
 export default {

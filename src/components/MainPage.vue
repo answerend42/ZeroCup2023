@@ -1,14 +1,15 @@
 <template>
   <div id="app">
     <Navbar
-  :is-visible="currentSection !== 0"
-  @navigate-to-section="scrollToSection"
-/>
+      :is-visible="currentSection !== 0"
+      @navigate-to-section="scrollToSection"
+    />
     <div @wheel.prevent="handleScroll" class="section-container">
       <Section1 ref="section1" />
       <Section2 ref="section2" />
       <Section3 ref="section3" />
       <Section4 ref="section4" />
+      <Section5 ref="section5" />
     </div>
   </div>
 </template>
@@ -19,6 +20,7 @@ import Section1 from "@/components/Section1.vue";
 import Section2 from "@/components/Section2.vue";
 import Section3 from "@/components/Section3.vue";
 import Section4 from "@/components/Section4.vue";
+import Section5 from "@/components/Section5.vue";
 
 export default {
   name: "App",
@@ -28,6 +30,7 @@ export default {
     Section2,
     Section3,
     Section4,
+    Section5,
   },
   data() {
     return {
@@ -44,7 +47,7 @@ export default {
       const direction = event.deltaY > 0 ? 1 : -1;
       this.currentSection = this.currentSection + direction;
 
-      // Bound the section index
+      // 绑定section索引
       if (this.currentSection < 0) this.currentSection = 0;
       if (this.currentSection > this.sectionsOffsetTop.length - 1) {
         this.currentSection = this.sectionsOffsetTop.length - 1;
@@ -55,7 +58,7 @@ export default {
         behavior: "smooth",
       });
 
-      // Wait for the smooth scroll to finish before allowing another scroll
+      // 等待平滑滚动完成后再允许下一次滚动
       setTimeout(() => {
         this.isScrolling = false;
       }, 1000);
@@ -81,28 +84,32 @@ export default {
       }, 1000);
     },
     scrollToAnchor() {
-    this.calculateSectionsOffsetTop();
-    this.$nextTick(() => {
-      if (window.location.hash) {
-        const sectionId = window.location.hash.substring(1); // 去除锚点前的#
-        const sectionNumber = Number(sectionId.replace("section", "")) - 1;
+      this.calculateSectionsOffsetTop();
+      this.$nextTick(() => {
+        if (window.location.hash) {
+          const sectionId = window.location.hash.substring(1); // 去除锚点前的#
+          const sectionNumber = Number(sectionId.replace("section", "")) - 1;
 
-        if (!isNaN(sectionNumber) && sectionNumber >= 0 && sectionNumber < this.sectionsOffsetTop.length) {
-          window.scrollTo({
-            top: this.sectionsOffsetTop[sectionNumber],
-            behavior: "smooth",
-          });
+          if (
+            !isNaN(sectionNumber) &&
+            sectionNumber >= 0 &&
+            sectionNumber < this.sectionsOffsetTop.length
+          ) {
+            window.scrollTo({
+              top: this.sectionsOffsetTop[sectionNumber],
+              behavior: "smooth",
+            });
+          }
         }
-      }
-    });
+      });
+    },
   },
-},
-mounted() {
-  window.addEventListener("hashchange", this.scrollToAnchor);
-  this.scrollToAnchor(); // 确保在页面加载时调用
-  this.calculateSectionsOffsetTop();
-  window.addEventListener("resize", this.calculateSectionsOffsetTop);
-},
+  mounted() {
+    window.addEventListener("hashchange", this.scrollToAnchor);
+    this.scrollToAnchor(); // 确保在页面加载时调用
+    this.calculateSectionsOffsetTop();
+    window.addEventListener("resize", this.calculateSectionsOffsetTop);
+  },
   beforeDestroy() {
     window.removeEventListener("resize", this.calculateSectionsOffsetTop);
   },

@@ -6,7 +6,7 @@
     ></div>
     <div class="content-wrapper">
       <div class="image3-container">
-        <img src="@/assets/相声协会logo.jpg" class="background-center" />
+        <img src="@/assets/相声协会logo.webp" class="background-center" />
       </div>
       <p class="tagline">继承传统,藿香正气</p>
     </div>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import image1 from "@/assets/相声协会底图.png";
+import image1 from "@/assets/相声协会底图.webp";
 
 export default {
   name: "Section1",
@@ -66,12 +66,11 @@ export default {
 }
 .tagline {
   position: absolute;
-  top: 70%; /* 根据logo实际缩放后的大小调整此值 */
   left: 50%;
   transform: translate(-50%, 20px); /* 水平居中并稍微垂直偏移 */
   width: 100%;
-  font-size: 50px;
-  font-family: 'Noto Serif SC', serif;
+  font-size: 100px;
+  font-family: "Noto Serif SC", serif;
   font-weight: 700;
 }
 </style>

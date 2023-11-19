@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import image1 from "@/assets/民乐团底图.png";
+import image1 from "@/assets/民乐团底图.webp";
 
 export default {
   name: "Section1",
@@ -62,14 +62,14 @@ export default {
   display: block;
   margin: 0 auto;
   transform: scale(2);
+  width: 240px;
 }
 .tagline {
   position: absolute;
-  top: 70%; /* 根据logo实际缩放后的大小调整此值 */
   left: 50%;
   transform: translate(-50%, 20px); /* 水平居中并稍微垂直偏移 */
   width: 100%;
-  font-size: 50px;
+  font-size: 100px;
   font-family: 'Noto Serif SC', serif;
   font-weight: 700;
 }

@@ -18,6 +18,8 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.4.0",
     "connect-history-api-fallback": "^2.0.0",
+    "postcss-modules": "^6.0.0",
+    "postcss-px-to-viewport": "^1.1.1",
     "vite": "^4.4.11",
     "vue-router": "^4.2.5"
   }

@@ -25,10 +25,10 @@
 </template>
 
 <script>
-import image1 from "@/assets/笛箫配图1.jpg";
-import image2 from "@/assets/笛箫配图3.jpg";
-import image3 from "@/assets/笛箫配图4.jpg";
-import backgroundImage from "@/assets/笛箫协会背景.png";
+import image1 from "@/assets/笛箫配图1.webp";
+import image2 from "@/assets/笛箫配图3.webp";
+import image3 from "@/assets/笛箫配图4.webp";
+import backgroundImage from "@/assets/笛箫协会背景.webp";
 export default {
   name: "Section3",
   data() {
@@ -105,8 +105,8 @@ export default {
 }
 
 .card {
-  width: 200px;
-  height: 500px; /*固定高度*/
+  width: 300px;
+  height: 800px; /*固定高度*/
   transition: width 0.4s; /* 过渡宽度属性 */
   margin: 10px;
   cursor: pointer;

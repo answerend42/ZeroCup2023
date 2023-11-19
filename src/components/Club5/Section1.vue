@@ -6,7 +6,7 @@
     ></div>
     <div class="content-wrapper">
       <div class="image3-container">
-        <img src="@/assets/国学社logo.jpg" class="background-center" />
+        <img src="@/assets/国学社logo.webp" class="background-center" />
       </div>
       <p class="tagline">情兼悲喜成知己,学贯古今动群儒</p>
     </div>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import image1 from "@/assets/国学社底图.png";
+import image1 from "@/assets/国学社底图.webp";
 
 export default {
   name: "Section1",
@@ -66,11 +66,10 @@ export default {
 }
 .tagline {
   position: absolute;
-  top: 70%; /* 根据logo实际缩放后的大小调整此值 */
   left: 50%;
   transform: translate(-50%, 20px); /* 水平居中并稍微垂直偏移 */
   width: 100%;
-  font-size: 50px;
+  font-size: 100px;
   font-family: 'Noto Serif SC', serif;
   font-weight: 700;
 }

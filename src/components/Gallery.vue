@@ -37,11 +37,11 @@
 </template>
 
 <script>
-import image1 from "@/assets/晨读1.jpg";
-import image2 from "@/assets/晨读2.jpg";
-import image3 from "@/assets/晨读3.jpg";
-import image4 from "@/assets/晨读4.jpg";
-import image5 from "@/assets/晨读5.jpg";
+import image1 from "@/assets/晨读1.webp";
+import image2 from "@/assets/晨读2.webp";
+import image3 from "@/assets/晨读3.webp";
+import image4 from "@/assets/晨读4.webp";
+import image5 from "@/assets/晨读5.webp";
 
 export default {
   data() {

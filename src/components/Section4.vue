@@ -25,7 +25,8 @@
       <p class="overall-description">
         转入武大校园，仿佛穿越了时光的隧道，我们置身于古风建筑的海洋中。<br />
         这里的每一片砖瓦，每一栋楼宇，都是时光的见证者，承载着历史的沉淀。<br />
-        这将是我们探寻的奇妙旅程，仿佛在一本古老的经书中翻阅，寻找那些珍贵而深邃的文化符号。 <br />
+        这将是我们探寻的奇妙旅程，仿佛在一本古老的经书中翻阅，寻找那些珍贵而深邃的文化符号。
+        <br />
         让我们携手走进这片文化的海洋，感受中华传统文化传承，聆听武大校园的古老诗行，让建筑成为时光的过渡，连接起千年的文化底蕴。
       </p>
     </div>
@@ -33,12 +34,12 @@
 </template>
 
 <script>
-import image1 from "../assets/武汉大学早期建筑群.jpg";
-import image2 from "../assets/武汉大学图书馆.jpg";
-import image3 from "../assets/宋卿体育馆.jpg";
-import image4 from "../assets/周恩来故居.jpg";
+import image1 from "../assets/武汉大学早期建筑群.webp";
+import image2 from "../assets/武汉大学图书馆.webp";
+import image3 from "../assets/宋卿体育馆.webp";
+import image4 from "../assets/周恩来故居.webp";
 
-import backgroundImage from "@/assets/主页底图.png";
+import backgroundImage from "@/assets/主页底图.webp";
 
 export default {
   name: "Section4",
@@ -112,40 +113,37 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap');
+@import url("https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap");
 .description-container {
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   text-align: center;
 }
 
 .overall-description {
-  font-family: 'Noto Serif SC', serif;
-  font-size: 1.5em;
+  font-family: "Noto Serif SC", serif;
+  font-size: 25px;
   font-weight: 700;
-
+  margin: 0;
   /* 添加其他样式属性，如字体、颜色、背景等 */
 }
 .section {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center; /* 垂直居中 */
+  align-items: center; /* 水平居中 */
   height: 100vh;
   position: relative;
 }
 .card-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; /* 水平居中对齐 */
+  align-items: flex-start; /* 垂直顶部对齐 */
+  /* 其他样式 */
 }
 
 .card {
-  width: 200px;
-  height: 500px; /*固定高度*/
+  width: 300px;
+  height: 700px; /*固定高度*/
   transition: width 0.4s; /* 过渡宽度属性 */
   margin: 10px;
   cursor: pointer;
@@ -208,8 +206,21 @@ export default {
   padding: auto;
   background-color: rgba(255, 255, 255, 0.6);
   text-align: center;
-  font-family: 'Noto Serif SC', serif;
+  font-family: "Noto Serif SC", serif;
+  font-weight: 700;
   transition: opacity 0.4s;
   z-index: 2;
+}
+@media screen and (max-width: 767px) {
+  .overall-description {
+    display: none;
+  }
+  .card {
+    height: 80vh;
+    width: 10vw;
+  }
+  .card.expanded {
+    width: 30vw; /* 高度不变，宽度变宽 */
+  }
 }
 </style>

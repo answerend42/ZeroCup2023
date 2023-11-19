@@ -5,6 +5,7 @@
         <li><a @click="goToSection(0)">主页</a></li>
         <li><a @click="goToSection(2)">学生组织</a></li>
         <li><a @click="goToSection(3)">传统建筑</a></li>
+        <li><a @click="goToSection(4)">传统文化</a></li>
       </ul>
     </div>
   </nav>
@@ -84,7 +85,7 @@ a {
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   li {
     font-size: 3vw; /* 在小屏幕上增加字体大小 */
     margin: 3vw;
